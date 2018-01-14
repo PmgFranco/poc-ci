@@ -41,6 +41,8 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         mug.setPrice(new BigDecimal("11.95"));
         productRepository.save(mug);
 
+        log.info("Saved Mug - id:" + mug.getId());
+
         Product mug2 = new Product();
         mug2.setDescription("Pedro Franco 2nd mug");
         mug2.setImageUrl("https://springframework.guru/wp-content/uploads/2015/04/spring_framework_guru_coffee_mug-r11e7694903c348e1a667dfd2f1474d95_x7j54_8byvr_512.jpg");
@@ -48,6 +50,6 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         mug2.setPrice(new BigDecimal("1100"));
         productRepository.save(mug2);
 
-        log.info("Saved Mug - id:" + mug.getId());
+        log.info("Saved Mug2 - id:" + mug.getId());
     }
 }
